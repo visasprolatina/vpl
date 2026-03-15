@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VisasPro Latina | Asesoría Migratoria Profesional</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .bg-primary-dark { background-color: #003366; } /* Azul Profesional */
+        .btn-visa { background-color: #e63946; color: white; border-radius: 50px; padding: 10px 30px; font-weight: bold; }
+        .hero-section { 
+            background: linear-gradient(rgba(0,51,102,0.7), rgba(0,51,102,0.7)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover; background-position: center; color: white; padding: 100px 0;
+        }
+        .feature-card { border: none; transition: 0.3s; }
+        .feature-card:hover { transform: translateY(-10px); }
+        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50px; text-align: center; font-size: 30px; z-index: 100; line-height: 60px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">VISASPRO LATINA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="btn btn-visa ms-lg-3" href="https://wa.me/593983736698">¡Asesórate Ya!</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold">Tu Visa americana, más cerca de lo que crees</h1>
+            <p class="lead mb-4">Asesoría experta y personalizada para trámites migratorios. ¡Empecemos hoy!</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6 bg-white p-4 rounded shadow text-dark">
+                    <h4 class="mb-3 text-primary">Inicia tu asesoría online</h4>
+                    <form action="https://formsubmit.co/visasprolatina@gmail.com" method="POST">
+                        <input type="text" name="nombre" class="form-control mb-2" placeholder="Nombre Completo" required>
+                        <input type="email" name="email" class="form-control mb-2" placeholder="Correo Electrónico" required>
+                        <select name="visa" class="form-select mb-3">
+                            <option>Tipo de Visa: Americana</option>
+                            <option>Schengen (Europa)</option>
+                            <option>Canadá</option>
+                        </select>
+                        <button type="submit" class="btn btn-visa w-100">SOLICITAR INFORMACIÓN</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="servicios" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-5">¿Por qué elegir VisasPro Latina?</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card feature-card p-4 shadow-sm mb-4">
+                        <i class="fas fa-clock fa-3x text-primary mb-3"></i>
+                        <h5>Ahorras Tiempo</h5>
+                        <p>Resolvemos tu proceso sin estrés y con la mayor rapidez posible.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card p-4 shadow-sm mb-4">
+                        <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
+                        <h5>Evitas Rechazos</h5>
+                        <p>Revisión minuciosa de documentos para maximizar aprobación.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card p-4 shadow-sm mb-4">
+                        <i class="fas fa-shield-alt fa-3x text-danger mb-3"></i>
+                        <h5>Protección Total</h5>
+                        <p>Tus datos y tu inversión están seguros con expertos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/593983736698" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer class="bg-primary-dark text-white py-4 text-center">
+        <p>© 2024 VisasPro Latina - Todos los derechos reservados</p>
+        <p><i class="fas fa-envelope"></i> visasprolatina@gmail.com | <i class="fas fa-phone"></i> +593 98 373 6698</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
