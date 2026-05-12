@@ -14,12 +14,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<meta property="og:image" content="https://www.visasprolatina.com/portada.jpg">
-<meta property="og:url" content="https://www.visasprolatina.com">
-<meta property="og:type" content="website">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
         body { font-family: 'Poppins', sans-serif; }
@@ -35,28 +29,61 @@
         .step-icon { width: 70px; height: 70px; line-height: 70px; border-radius: 50%; background: #003366; color: white; font-size: 28px; margin: 0 auto 20px; }
         .banner-vacaciones { background: #e63946; color: white; padding: 50px 0; }
         
-        /* BOTÓN FLOTANTE REVERTIDO A CIRCULO SIN TEXTO */
+        /* BOTÓN FLOTANTE */
         .whatsapp-float { 
-            position: fixed; 
-            bottom: 30px; 
-            right: 30px; 
-            background: #25d366; 
-            color: white; 
-            width: 65px; /* Ancho fijo */
-            height: 65px; /* Alto fijo */
-            border-radius: 50px; 
-            text-align: center; 
-            font-size: 35px; /* Tamaño del icono */
-            z-index: 100; 
-            line-height: 65px; /* Centrado vertical del icono */
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.2); 
-            transition: 0.3s; 
-            text-decoration: none; 
+            position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50px; text-align: center; font-size: 35px; z-index: 100; line-height: 65px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); transition: 0.3s; text-decoration: none; 
         }
         .whatsapp-float:hover { transform: scale(1.1); color: white; background: #20b858; }
+
+        /* ESTILOS PARA LA VENTANA EMERGENTE */
+        .btn-country {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 15px;
+            border-radius: 15px;
+            text-decoration: none;
+            transition: 0.3s;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .btn-country:hover {
+            background: #e63946;
+            color: white;
+            transform: translateY(-5px);
+        }
     </style>
 </head>
 <body>
+
+    <div class="modal fade" id="welcomeModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4 shadow-lg border-0" style="background: linear-gradient(rgba(0,51,102,0.95), rgba(0,51,102,0.95)), url('https://images.unsplash.com/photo-1544016768-982d1554f0b9?auto=format&fit=crop&w=800&q=80'); background-size: cover; color: white; border-radius: 20px;">
+                <div class="modal-header border-0 justify-content-center pb-0">
+                    <h2 class="fw-bold text-center mb-0" style="letter-spacing: 1px;">VISAS PRO LATINA</h2>
+                </div>
+                <div class="modal-body text-center">
+                    <h5 class="mb-4 mt-2" style="color: #ffbe0b; font-style: italic;">"Tu futuro Dios ya lo tiene planeado"</h5>
+                    <p class="fs-5 fw-bold text-white">Te ayudamos a hacer realidad tus sueños</p>
+                    <p class="small opacity-75 mb-4 text-white">Tramita tu visa AMERICANA, SCHENGEN O CANADIENSE con nosotros, te acompañamos en el proceso de principio a fin.</p>
+                    
+                    <p class="fw-bold mb-3 text-white">Selecciona tu país para atención directa:</p>
+                    
+                    <a href="https://wa.me/593992915019?text=Hola%20VisasPro%20Latina,%20necesito%20asesoría%20desde%20Ecuador." class="btn-country text-white">
+                        🇪🇨 Ecuador: +593 99 291 5019
+                    </a>
+                    
+                    <a href="https://wa.me/573123349050?text=Hola%20VisasPro%20Latina,%20necesito%20asesoría%20desde%20Colombia." class="btn-country text-white">
+                        🇨🇴 Colombia: +57 312 3349050
+                    </a>
+                </div>
+                <div class="modal-footer border-0 justify-content-center pt-0">
+                    <button type="button" class="btn btn-link text-white opacity-50 text-decoration-none" data-bs-dismiss="modal">Entrar a la página</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary-dark sticky-top shadow-sm">
         <div class="container">
@@ -69,7 +96,7 @@
                     <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios</a></li>
                     <li class="nav-item"><a class="nav-link" href="#proceso">Cómo Funciona</a></li>
-                    <li class="nav-item mt-2 mt-lg-0"><a class="btn btn-visa ms-lg-3" href="https://wa.me/593992915019?text=Hola%20VisasPro%20Latina,%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20y%20asesor%C3%ADa%20para%20mi%20visa." target="_blank"><i class="fab fa-whatsapp me-2"></i>¡Asesórate Ya!</a></li>
+                    <li class="nav-item mt-2 mt-lg-0"><a class="btn btn-visa ms-lg-3" href="https://wa.me/593992915019" target="_blank"><i class="fab fa-whatsapp me-2"></i>¡Asesórate Ya!</a></li>
                 </ul>
             </div>
         </div>
@@ -173,28 +200,26 @@
               <h3 class="card-title mb-3"><i class="fas fa-map-marker-alt text-danger me-2"></i> Ecuador</h3>
               <p class="card-text">Comunícate directamente con nuestros asesores en Ecuador para iniciar tu trámite.</p>
               <a href="https://wa.me/593992915019?text=Hola%20VisasPro%20Latina,%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n." target="_blank" class="btn btn-success btn-lg mt-3" style="border-radius: 50px;">
-                <i class="fab fa-whatsapp me-2"></i> Chatear con un asesor
+                <i class="fab fa-whatsapp me-2"></i> +593 99 291 5019
               </a>
             </div>
           </div>
         </div>
         <div class="col-md-5">
-          <div class="card h-100 shadow-sm border-0" style="background-color: #f8f9fa; opacity: 0.8;">
+          <div class="card h-100 shadow-sm border-0" style="background-color: #f8f9fa;">
             <div class="card-body text-center p-4">
-              <h3 class="card-title mb-3 text-muted"><i class="fas fa-map-marker-alt me-2"></i> Colombia</h3>
-              <p class="card-text text-muted">Estamos ultimando detalles para abrir nuestra sede en Colombia.</p>
-              <div class="mt-4">
-                <span class="badge bg-secondary px-4 py-2" style="font-size: 1rem; border-radius: 50px;">
-                  <i class="fas fa-hourglass-half me-1"></i> Próximamente
-                </span>
-              </div>
+              <h3 class="card-title mb-3"><i class="fas fa-map-marker-alt text-danger me-2"></i> Colombia</h3>
+              <p class="card-text">Comunícate directamente con nuestros asesores en Colombia para iniciar tu trámite.</p>
+              <a href="https://wa.me/573123349050?text=Hola%20VisasPro%20Latina,%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n." target="_blank" class="btn btn-success btn-lg mt-3" style="border-radius: 50px;">
+                <i class="fab fa-whatsapp me-2"></i> +57 312 3349050
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <a href="https://wa.me/593992915019?text=Hola%20VisasPro%20Latina,%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n." class="whatsapp-float" target="_blank" title="Chatea con nosotros">
+    <a href="https://wa.me/593992915019" class="whatsapp-float" target="_blank" title="Chatea con nosotros">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -205,7 +230,8 @@
             
             <div class="d-flex flex-column align-items-center mb-3">
                 <span class="mb-2"><i class="fas fa-envelope me-2"></i> visasprolatina@gmail.com</span>
-                <span><i class="fas fa-phone me-2"></i> +593 99 291 5019</span>
+                <span class="mb-2"><i class="fas fa-phone me-2"></i> 🇪🇨 +593 99 291 5019</span>
+                <span><i class="fas fa-phone me-2"></i> 🇨🇴 +57 312 3349050</span>
             </div>
             
             <hr class="mt-4 mb-3 border-light">
@@ -218,5 +244,14 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Ventana emergente al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                var myModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+                myModal.show();
+            }, 2000); // 2 segundos de espera para que aparezca
+        });
+    </script>
 </body>
 </html>
